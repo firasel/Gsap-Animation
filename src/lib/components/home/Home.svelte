@@ -5,14 +5,86 @@
 	import BgStars from './sub-components/BgStars.svelte';
 	import BgTop from './sub-components/BgTop.svelte';
 
-	let homeTl = gsap.timeline({ defaults: { duration: 1.5 } });
-
 	onMount(() => {
+		// Light scale animation
+		function animateLightScale() {
+			let lightTl = gsap.timeline({
+				defaults: { duration: 3, stagger: 0.1 },
+				repeat: -1,
+				yoyo: true,
+				delay: 0.1
+			});
+			lightTl.fromTo('.light', { scaleY: 1 }, { scaleY: 0.95 });
+		}
+
+		let homeTl = gsap.timeline({ defaults: { duration: 1.5 }, onComplete: animateLightScale });
 		// Lights animation
-		homeTl.fromTo('#light1', { y: '-100%', scaleY: 0 }, { y: '0', scaleY: 1 });
-		homeTl.fromTo('#light2', { y: '-100%', scaleY: 0 }, { y: '0', scaleY: 1 }, '<10%');
-		homeTl.fromTo('#light3', { y: '-100%', scaleY: 0 }, { y: '0', scaleY: 1 }, '<-5%');
-		homeTl.fromTo('#light4', { y: '-100%', scaleY: 0 }, { y: '0', scaleY: 1 }, '<20%');
+		homeTl.fromTo('.light', { y: '-100%', scaleY: 0 }, { y: 0, scaleY: 1, stagger: 0.2 });
+		gsap.fromTo('.chain', { y: '-100%' }, { y: 0, duration: 1, stagger: 0.2 });
+
+		// Animate hero title
+		// Split title word and letter
+		var heroTitle = document.querySelectorAll('.hero_title');
+		heroTitle.forEach((node) => {
+			node.innerHTML = node.innerHTML
+				.split('<br>')
+				.map((word) => {
+					return word
+						.split(' ')
+						.map(
+							(word) =>
+								`<span class='hero_word'>${word.replace(
+									/\S/g,
+									"<span class='hero_letter inline-block -translate-y-full'>$&</span>"
+								)}</span>`
+						)
+						.join(' ');
+				})
+				.join('<br>');
+		});
+
+		// Title initial animation
+		let heroTextTimeLine = gsap.timeline({
+			duration: 1,
+			ease: 'expo.in',
+			delay: 0
+		});
+
+		heroTextTimeLine.fromTo(
+			'.hero_letter',
+			{ y: '100%', opacity: 0 },
+			{
+				y: 0,
+				stagger: 0.02,
+				opacity: 1,
+				delay: 0
+			}
+		);
+
+		// Letter animation
+		let letterTl = gsap.timeline({
+			defaults: { duration: 1.5, stagger: 0.3 },
+			repeat: -1,
+			yoyo: true
+		});
+
+		letterTl.fromTo('.hero_letter', { rotate: -3 }, { rotate: 0 });
+
+		// Background star and dots animation
+		gsap.fromTo(
+			'.bg_star',
+			{ opacity: 0.5, rotate: 0, scale: 0.2 },
+			{ opacity: 1, rotate: 10, scale: 1, duration: 1, delay: 0.1, repeat: -1, yoyo: true }
+		);
+		gsap.fromTo(
+			'.bg_dot',
+			{ opacity: 1, rotate: 10, scale: 1 },
+			{ opacity: 0.5, rotate: 0, scale: 0.5, duration: 1, delay: 0.1, repeat: -1, yoyo: true }
+		);
+
+		gsap.fromTo('#right-mosque', { x: '100%' }, { x: 0, duration: 2 });
+		gsap.fromTo('#left-mosque', { x: '-100%' }, { x: 0, duration: 2 });
+		gsap.fromTo('#bgTop', { y: '100%' }, { y: 0, duration: 1.5 });
 	});
 </script>
 
@@ -20,7 +92,7 @@
 	<div class="py-[10rem] min-h-[80vh] flex items-center justify-center">
 		<div class="container relative z-[100]">
 			<h2
-				class="w-full text-center text-[4rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[10rem] text-secondary font-primary font-normal leading-[1]"
+				class="w-full text-center text-[4rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[10rem] text-secondary font-primary font-normal leading-[1] overflow-hidden hero_title"
 			>
 				Ramadan<br />Mubarak
 			</h2>

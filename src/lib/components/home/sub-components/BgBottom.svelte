@@ -6,7 +6,7 @@
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<g id="bottom">
-		<g id="right-mosque">
+		<g id="left-mosque">
 			<g id="rm4">
 				<path
 					id="Vector"
@@ -152,7 +152,7 @@
 				/>
 			</g>
 		</g>
-		<g id="left-mosque">
+		<g id="right-mosque">
 			<g id="m5">
 				<path
 					id="Vector_26"

@@ -7,7 +7,7 @@
 >
 	<g id="top">
 		<g id="chain">
-			<g id="l-chain-1">
+			<g id="l-chain-1" class="chain">
 				<g id="Group">
 					<path
 						id="Vector"
@@ -113,7 +113,7 @@
 					/>
 				</g>
 			</g>
-			<g id="r-chain-1">
+			<g id="r-chain-1" class="chain">
 				<g id="Group_3">
 					<path
 						id="Vector_21"
@@ -239,7 +239,7 @@
 					/>
 				</g>
 			</g>
-			<g id="l-chain-2">
+			<g id="l-chain-2" class="chain">
 				<g id="Group_5">
 					<path
 						id="Vector_45"
@@ -435,7 +435,7 @@
 					/>
 				</g>
 			</g>
-			<g id="r-chain-2">
+			<g id="r-chain-2" class="chain">
 				<g id="Group_7">
 					<path
 						id="Vector_83"
@@ -633,7 +633,7 @@
 			</g>
 		</g>
 		<g id="lights">
-			<g id="light4">
+			<g id="light4" class="light">
 				<path
 					id="Vector_121"
 					fill-rule="evenodd"
@@ -647,7 +647,7 @@
 					fill="url(#paint121_radial_0_11695)"
 				/>
 			</g>
-			<g id="light1">
+			<g id="light1" class="light">
 				<path
 					id="Vector_123"
 					fill-rule="evenodd"
@@ -661,7 +661,7 @@
 					fill="url(#paint123_radial_0_11695)"
 				/>
 			</g>
-			<g id="light3">
+			<g id="light3" class="light">
 				<path
 					id="Vector_125"
 					d="M1702.15 0H1700.54V545.75H1702.15V0Z"
@@ -673,7 +673,7 @@
 					fill="url(#paint125_radial_0_11695)"
 				/>
 			</g>
-			<g id="light2">
+			<g id="light2" class="light">
 				<path
 					id="Vector_127"
 					d="M824.96 -51.17H823.35V594.58H824.96V-51.17Z"
