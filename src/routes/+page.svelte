@@ -8,6 +8,5 @@
 </svelte:head>
 
 <section>
-	<h1 class="text-center text-5xl my-10 text-gray-700">Hello world</h1>
 	<Home />
 </section>
