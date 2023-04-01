@@ -6,6 +6,9 @@
 	import BgTop from './sub-components/BgTop.svelte';
 
 	onMount(() => {
+		// Show background layer and text content
+		gsap.to('.bgLayerTop', { display: 'block' });
+		gsap.to('.content', { display: 'flex' });
 		// Light scale animation
 		function animateLightScale() {
 			let lightTl = gsap.timeline({
@@ -85,11 +88,23 @@
 		gsap.fromTo('#right-mosque', { x: '100%' }, { x: 0, duration: 2 });
 		gsap.fromTo('#left-mosque', { x: '-100%' }, { x: 0, duration: 2 });
 		gsap.fromTo('#bgTop', { y: '100%' }, { y: 0, duration: 1.5 });
+
+		gsap.fromTo(
+			'.moon',
+			{ attr: { fill: '#201033' } },
+			{
+				attr: { fill: 'rgba(32, 16, 51, 0.3)' },
+				duration: 0.8,
+				repeat: -1,
+				yoyo: true,
+				stagger: 0.5
+			}
+		);
 	});
 </script>
 
 <section class="w-full min-h-screen relative bg-gradient-1">
-	<div class="py-[10rem] min-h-[80vh] flex items-center justify-center">
+	<div class="py-[10rem] min-h-[80vh] items-center justify-center hidden content">
 		<div class="container relative z-[100]">
 			<h2
 				class="w-full text-center text-[4rem] md:text-[5rem] lg:text-[7rem] xl:text-[8rem] 2xl:text-[10rem] text-secondary font-primary font-normal leading-[1] overflow-hidden hero_title"
@@ -98,7 +113,7 @@
 			</h2>
 		</div>
 	</div>
-	<div class="z-0">
+	<div class="z-0 hidden bgLayerTop">
 		<div class="absolute top-0 w-full z-10">
 			<BgTop />
 		</div>
