@@ -6,5 +6,6 @@
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
-
-<Home />
+<main class="bg-gradient-1">
+	<Home />
+</main>

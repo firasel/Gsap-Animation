@@ -103,7 +103,7 @@
 	});
 </script>
 
-<section class="w-full min-h-screen relative bg-gradient-1 overflow-hidden">
+<section class="w-full min-h-screen relative overflow-hidden">
 	<div class="py-[10rem] min-h-[80vh] items-center justify-center hidden content">
 		<div class="container relative z-[100]">
 			<h2
