@@ -103,7 +103,7 @@
 	});
 </script>
 
-<section class="w-full min-h-screen relative bg-gradient-1">
+<section class="w-full min-h-screen relative bg-gradient-1 overflow-hidden">
 	<div class="py-[10rem] min-h-[80vh] items-center justify-center hidden content">
 		<div class="container relative z-[100]">
 			<h2
@@ -114,13 +114,13 @@
 		</div>
 	</div>
 	<div class="z-0 hidden bgLayerTop">
-		<div class="absolute top-0 w-full z-10">
+		<div class="absolute top-0 w-[140%] md:w-full z-10">
 			<BgTop />
 		</div>
 		<div class="absolute top-0 w-full z-20">
 			<BgStars />
 		</div>
-		<div class="absolute bottom-0 w-full z-[5]">
+		<div class="absolute bottom-0 w-[200%] md:w-full z-[5]">
 			<BgBottom />
 		</div>
 	</div>
