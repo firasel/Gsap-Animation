@@ -155,10 +155,24 @@
 			)
 			.fromTo(
 				'.time-line-clock',
-				{ scale: 1, rotate: 0, opacity: 1, scrollTrigger: { start: '0%', end: '100%' } },
-				{ scale: 0, rotate: 180, opacity: 0.5 }
+				{ scale: 1, opacity: 1, scrollTrigger: { start: '0%', end: '100%' } },
+				{ scale: 0, opacity: 0.5 }
 			)
 			.fromTo('.bottom-mosque', { opacity: 0 }, { opacity: 1 }, '<');
+
+		// Clock bottom line animation
+		gsap.fromTo(
+			'#C-line',
+			{ rotate: 5, transformOrigin: 'top' },
+			{
+				rotate: -5,
+				repeat: -1,
+				duration: 2,
+				delay: 0,
+				ease: 'power1.inOut',
+				yoyo: true
+			}
+		);
 	});
 </script>
 
