@@ -1,9 +1,8 @@
 <script>
-	import Clock from './sub-components/Clock.svelte';
-
 	import gsap from 'gsap';
 	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
+	import Clock from './sub-components/Clock.svelte';
 	import Mosque from './sub-components/Mosque.svelte';
 	import Task1 from './sub-components/Task1.svelte';
 	import Task2 from './sub-components/Task2.svelte';
@@ -12,8 +11,11 @@
 	import Task5 from './sub-components/Task5.svelte';
 	import Task6 from './sub-components/Task6.svelte';
 	import TaskWrapper from './sub-components/TaskWrapper.svelte';
+
 	onMount(() => {
+		// Register ScrollTrigger plugin
 		gsap.registerPlugin(ScrollTrigger);
+
 		let clockTl = gsap.timeline({
 			scrollTrigger: {
 				trigger: '.time-line-clock',

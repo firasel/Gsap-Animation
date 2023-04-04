@@ -9,6 +9,7 @@
 		// Show background layer and text content
 		gsap.to('.bgLayerTop', { display: 'block' });
 		gsap.to('.content', { display: 'flex' });
+
 		// Light scale animation
 		function animateLightScale() {
 			let lightTl = gsap.timeline({
