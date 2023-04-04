@@ -1,38 +1,58 @@
-# create-svelte
+<br/>
+<h1 align="center">Ramadan Wishes</h1>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This project is a visually appealing Ramadan wishes landing page created with Svelte.js and styled with TailwindCSS. Animations were added with GSAP to enhance the user experience.
 
-## Creating a project
+## Technologies
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Svelte.js](https://svelte.dev)
+- [TailwindCSS](https://tailwindcss.com)
+- [Gsap](https://greensock.com/gsap)
+
+## Run Locally
+
+Clone the repository
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/firasel/Gsap-Animation.git
 ```
 
-## Developing
+Go to the project directory
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+cd Gsap-Animation
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Inspiration and Credits
 
-To create a production version of your app:
+Inspired by Gsap Showcase. Every code is written by me.
 
-```bash
-npm run build
-```
+- [Gsap Showcase](https://greensock.com/showcase)
 
-You can preview the production build with `npm run preview`.
+## Contribution
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Please feel free to add issues/pull requests to the project.
+
+## License
+
+[MIT License](LICENSE)
+
+## Authors
+
+[@firasel](https://github.com/firasel)
+
+If you liked the project, think about giving a ⭐ to the repository.
+
+Thanks.
