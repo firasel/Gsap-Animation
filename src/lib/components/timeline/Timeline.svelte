@@ -155,46 +155,48 @@
 			)
 			.fromTo(
 				'.time-line-clock',
-				{ scale: 1, opacity: 1, scrollTrigger: { start: '0%', end: '100%' } },
-				{ scale: 0, opacity: 0.5 }
+				{ scale: 1, rotate: 0, opacity: 1, scrollTrigger: { start: '0%', end: '100%' } },
+				{ scale: 0, rotate: 180, opacity: 0.5 }
 			)
 			.fromTo('.bottom-mosque', { opacity: 0 }, { opacity: 1 }, '<');
 	});
 </script>
 
-<section
-	class="min-h-screen flex items-center justify-center overflow-hidden bg-[#BE832F] time-line-clock py-24 time-line-clock"
->
-	<div class="container">
-		<div class="w-full flex justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
-			<div class="w-full relative flex items-center justify-center">
-				<TaskWrapper taskName="task2">
-					<Task2 />
-				</TaskWrapper>
-				<TaskWrapper taskName="task4">
-					<Task4 />
-				</TaskWrapper>
-				<TaskWrapper taskName="task6">
-					<Task6 />
-				</TaskWrapper>
-			</div>
-			<div class="w-1/4 mx-auto clock flex-shrink-0">
-				<Clock />
-			</div>
-			<div class="w-full relative flex items-center justify-center">
-				<TaskWrapper taskName="task1">
-					<Task1 />
-				</TaskWrapper>
-				<TaskWrapper taskName="task3">
-					<Task3 />
-				</TaskWrapper>
-				<TaskWrapper taskName="task5">
-					<Task5 />
-				</TaskWrapper>
+<section class="overflow-hidden">
+	<div
+		class="min-h-screen flex items-center justify-center overflow-hidden bg-[#BE832F] time-line-clock py-24 time-line-clock"
+	>
+		<div class="container">
+			<div class="w-full flex justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+				<div class="w-full relative flex items-center justify-center">
+					<TaskWrapper taskName="task2">
+						<Task2 />
+					</TaskWrapper>
+					<TaskWrapper taskName="task4">
+						<Task4 />
+					</TaskWrapper>
+					<TaskWrapper taskName="task6">
+						<Task6 />
+					</TaskWrapper>
+				</div>
+				<div class="w-1/4 mx-auto clock flex-shrink-0">
+					<Clock />
+				</div>
+				<div class="w-full relative flex items-center justify-center">
+					<TaskWrapper taskName="task1">
+						<Task1 />
+					</TaskWrapper>
+					<TaskWrapper taskName="task3">
+						<Task3 />
+					</TaskWrapper>
+					<TaskWrapper taskName="task5">
+						<Task5 />
+					</TaskWrapper>
+				</div>
 			</div>
 		</div>
 	</div>
-</section>
-<section class="w-full bottom-mosque">
-	<Mosque />
+	<div class="w-full max-h-screen absolute -translate-y-full opacity-0 bottom-mosque text-black">
+		<Mosque />
+	</div>
 </section>
