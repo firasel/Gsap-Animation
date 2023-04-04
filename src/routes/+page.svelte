@@ -4,8 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Ramadan Wishes</title>
 </svelte:head>
 <main>
 	<div class="bg-gradient-1">
