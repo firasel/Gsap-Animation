@@ -35,11 +35,17 @@ Start the server
 npm run dev
 ```
 
-## Inspiration and Credits
+## Inspiration
 
 Inspired by Gsap Showcase. Every code is written by me.
 
 - [Gsap Showcase](https://greensock.com/showcase)
+
+## Credits
+
+The assets for this project were collected from vecteezy.
+
+- [vecteezy](https://www.vecteezy.com)
 
 ## Contribution
 
